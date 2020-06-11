@@ -1,0 +1,24 @@
+{
+    "name": "Phooto Editor",
+    "short_name": "Phooto",
+    "description": "Editor de fotos",
+    "icons": [
+      {
+        "src": "logo192.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      },
+      {
+        "src": "logo512.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      }
+    ],
+    "background_color": "#fff",
+    "theme_color": "#ee9318",
+    "display": "fullscreen",
+    "orientation": "portrait",
+    "start_url": "/",
+    "scope": "/"
+}
+  

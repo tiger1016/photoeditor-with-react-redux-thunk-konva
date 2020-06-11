@@ -1,0 +1,995 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "title": "The root schema",
+    "description": "The root schema comprises the entire JSON document.",
+    "default": {},
+    "examples": [
+        {
+            "width": 400.0,
+            "height": 500.0,
+            "title": "string",
+            "spine": "Fashion book design",
+            "status": 1.0,
+            "print_area": {
+                "width": 600.0,
+                "height": 600.0
+            },
+            "background": {
+                "type": "color",
+                "url": "",
+                "color": "#FFFFFF"
+            },
+            "description": "text",
+            "margin": 0.0,
+            "containers": [
+                {
+                    "width": 15.0,
+                    "radius": 0.0,
+                    "height": 19.0,
+                    "items": [
+                        {
+                            "border": {
+                                "radius": "",
+                                "size": {
+                                    "top": 2.0,
+                                    "bottom": 2.0,
+                                    "right": 2.0,
+                                    "left": 2.0
+                                },
+                                "color": "#FFF"
+                            },
+                            "rotation": 0.0,
+                            "x": 120.0,
+                            "y": 4.5,
+                            "image_meta": {
+                                "transformation_data": [{
+                                    "crop_x": 0.0,
+                                    "crop_y": 0.0,
+                                    "rotation": 0.0,
+                                    "filters": ""
+                                }],
+                                "source": "https://images.unsplash.com/photo-1568251723346-462c2abfd420?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=932&q=80"
+                            },
+                            "type": "image",
+                            "text_meta": {
+                                "font_size": 18.0,
+                                "font_color": "#FFFFFF",
+                                "text": "My fashion style",
+                                "font": "Arial"
+                            },
+                            "width": 380.0,
+                            "height": 400.0
+                        }
+                    ],
+                    "margins": {
+                        "top": 0.0,
+                        "bottom": 0.0,
+                        "right": 0.0,
+                        "left": 0.0
+                    },
+                    "background": {
+                        "color": "#000000",
+                        "type": "color",
+                        "url": ""
+                    },
+                    "cover": 0.0
+                }
+            ]
+        }
+    ],
+    "required": [
+        "status",
+        "title",
+        "description",
+        "width",
+        "height",
+        "margin",
+        "print_area",
+        "background",
+        "spine",
+        "containers"
+    ],
+    "additionalProperties": true,
+    "properties": {
+        "status": {
+            "$id": "#/properties/status",
+            "type": "integer",
+            "title": "The status schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": 0.0,
+            "examples": [
+                1.0
+            ]
+        },
+        "title": {
+            "$id": "#/properties/title",
+            "type": "string",
+            "title": "The title schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "string"
+            ]
+        },
+        "description": {
+            "$id": "#/properties/description",
+            "type": "string",
+            "title": "The description schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "text"
+            ]
+        },
+        "width": {
+            "$id": "#/properties/width",
+            "type": "number",
+            "title": "The width schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": 0.0,
+            "examples": [
+                400.0
+            ]
+        },
+        "height": {
+            "$id": "#/properties/height",
+            "type": "number",
+            "title": "The height schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": 0.0,
+            "examples": [
+                500.0
+            ]
+        },
+        "margin": {
+            "$id": "#/properties/margin",
+            "type": "number",
+            "title": "The margin schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": 0.0,
+            "examples": [
+                0.0
+            ]
+        },
+        "print_area": {
+            "$id": "#/properties/print_area",
+            "type": "object",
+            "title": "The print_area schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": {},
+            "examples": [
+                {
+                    "width": 600.0,
+                    "height": 600.0
+                }
+            ],
+            "required": [
+                "width",
+                "height"
+            ],
+            "additionalProperties": true,
+            "properties": {
+                "width": {
+                    "$id": "#/properties/print_area/properties/width",
+                    "type": "number",
+                    "title": "The width schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": 0.0,
+                    "examples": [
+                        600.0
+                    ]
+                },
+                "height": {
+                    "$id": "#/properties/print_area/properties/height",
+                    "type": "number",
+                    "title": "The height schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": 0.0,
+                    "examples": [
+                        600.0
+                    ]
+                }
+            }
+        },
+        "background": {
+            "$id": "#/properties/background",
+            "type": "object",
+            "title": "The background schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": {},
+            "examples": [
+                {
+                    "type": "color",
+                    "url": "",
+                    "color": "#FFFFFF"
+                }
+            ],
+            "required": [
+                "type",
+                "color",
+                "url"
+            ],
+            "additionalProperties": true,
+            "properties": {
+                "type": {
+                    "$id": "#/properties/background/properties/type",
+                    "type": "string",
+                    "title": "The type schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "color"
+                    ]
+                },
+                "color": {
+                    "$id": "#/properties/background/properties/color",
+                    "type": "string",
+                    "title": "The color schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "#FFFFFF"
+                    ]
+                },
+                "url": {
+                    "$id": "#/properties/background/properties/url",
+                    "type": "string",
+                    "title": "The url schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        ""
+                    ]
+                }
+            }
+        },
+        "spine": {
+            "$id": "#/properties/spine",
+            "type": "string",
+            "title": "The spine schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "Fashion book design"
+            ]
+        },
+        "containers": {
+            "$id": "#/properties/containers",
+            "type": "array",
+            "title": "The containers schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": [],
+            "examples": [
+                [
+                    {
+                        "cover": 0.0,
+                        "width": 15.0,
+                        "radius": 0.0,
+                        "height": 19.0,
+                        "items": [
+                            {
+                                "width": 380.0,
+                                "height": 400.0,
+                                "border": {
+                                    "size": {
+                                        "left": 2.0,
+                                        "top": 2.0,
+                                        "bottom": 2.0,
+                                        "right": 2.0
+                                    },
+                                    "color": "#FFF",
+                                    "radius": ""
+                                },
+                                "rotation": 0.0,
+                                "x": 120.0,
+                                "y": 4.5,
+                                "image_meta": {
+                                    "source": "https://images.unsplash.com/photo-1568251723346-462c2abfd420?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=932&q=80",
+                                    "transformation_data": {
+                                        "rotation": 0.0,
+                                        "filters": "",
+                                        "crop_x": 0.0,
+                                        "crop_y": 0.0
+                                    }
+                                },
+                                "type": "image",
+                                "text_meta": {
+                                    "font_size": 18.0,
+                                    "font_color": "#FFFFFF",
+                                    "text": "My fashion style",
+                                    "font": "Arial"
+                                }
+                            }
+                        ],
+                        "margins": {
+                            "top": 0.0,
+                            "bottom": 0.0,
+                            "right": 0.0,
+                            "left": 0.0
+                        },
+                        "background": {
+                            "type": "color",
+                            "url": "",
+                            "color": "#000000"
+                        }
+                    }
+                ]
+            ],
+            "additionalItems": true,
+            "items": {
+                "anyOf": [
+                    {
+                        "$id": "#/properties/containers/items/anyOf/0",
+                        "type": "object",
+                        "title": "The first anyOf schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": {},
+                        "examples": [
+                            {
+                                "radius": 0.0,
+                                "width": 15.0,
+                                "height": 19.0,
+                                "items": [
+                                    {
+                                        "height": 400.0,
+                                        "border": {
+                                            "radius": "",
+                                            "size": {
+                                                "bottom": 2.0,
+                                                "right": 2.0,
+                                                "left": 2.0,
+                                                "top": 2.0
+                                            },
+                                            "color": "#FFF"
+                                        },
+                                        "rotation": 0.0,
+                                        "x": 120.0,
+                                        "y": 4.5,
+                                        "image_meta": {
+                                            "transformation_data": {
+                                                "crop_y": 0.0,
+                                                "rotation": 0.0,
+                                                "filters": "",
+                                                "crop_x": 0.0
+                                            },
+                                            "source": "https://images.unsplash.com/photo-1568251723346-462c2abfd420?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=932&q=80"
+                                        },
+                                        "type": "image",
+                                        "text_meta": {
+                                            "text": "My fashion style",
+                                            "font": "Arial",
+                                            "font_size": 18.0,
+                                            "font_color": "#FFFFFF"
+                                        },
+                                        "width": 380.0
+                                    }
+                                ],
+                                "margins": {
+                                    "top": 0.0,
+                                    "bottom": 0.0,
+                                    "right": 0.0,
+                                    "left": 0.0
+                                },
+                                "background": {
+                                    "type": "color",
+                                    "url": "",
+                                    "color": "#000000"
+                                },
+                                "cover": 0.0
+                            }
+                        ],
+                        "required": [
+                            "background",
+                            "width",
+                            "height",
+                            "radius",
+                            "margins",
+                            "cover",
+                            "items"
+                        ],
+                        "additionalProperties": true,
+                        "properties": {
+                            "background": {
+                                "$id": "#/properties/containers/items/anyOf/0/properties/background",
+                                "type": "object",
+                                "title": "The background schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": {},
+                                "examples": [
+                                    {
+                                        "color": "#000000",
+                                        "type": "color",
+                                        "url": ""
+                                    }
+                                ],
+                                "required": [
+                                    "type",
+                                    "color",
+                                    "url"
+                                ],
+                                "additionalProperties": true,
+                                "properties": {
+                                    "type": {
+                                        "$id": "#/properties/containers/items/anyOf/0/properties/background/properties/type",
+                                        "type": "string",
+                                        "title": "The type schema",
+                                        "description": "An explanation about the purpose of this instance.",
+                                        "default": "",
+                                        "examples": [
+                                            "color"
+                                        ]
+                                    },
+                                    "color": {
+                                        "$id": "#/properties/containers/items/anyOf/0/properties/background/properties/color",
+                                        "type": "string",
+                                        "title": "The color schema",
+                                        "description": "An explanation about the purpose of this instance.",
+                                        "default": "",
+                                        "examples": [
+                                            "#000000"
+                                        ]
+                                    },
+                                    "url": {
+                                        "$id": "#/properties/containers/items/anyOf/0/properties/background/properties/url",
+                                        "type": "string",
+                                        "title": "The url schema",
+                                        "description": "An explanation about the purpose of this instance.",
+                                        "default": "",
+                                        "examples": [
+                                            ""
+                                        ]
+                                    }
+                                }
+                            },
+                            "width": {
+                                "$id": "#/properties/containers/items/anyOf/0/properties/width",
+                                "type": "number",
+                                "title": "The width schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": 0.0,
+                                "examples": [
+                                    15.0
+                                ]
+                            },
+                            "height": {
+                                "$id": "#/properties/containers/items/anyOf/0/properties/height",
+                                "type": "number",
+                                "title": "The height schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": 0.0,
+                                "examples": [
+                                    19.0
+                                ]
+                            },
+                            "radius": {
+                                "$id": "#/properties/containers/items/anyOf/0/properties/radius",
+                                "type": "number",
+                                "title": "The radius schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": 0.0,
+                                "examples": [
+                                    0.0
+                                ]
+                            },
+                            "margins": {
+                                "$id": "#/properties/containers/items/anyOf/0/properties/margins",
+                                "type": "object",
+                                "title": "The margins schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": {},
+                                "examples": [
+                                    {
+                                        "top": 0.0,
+                                        "bottom": 0.0,
+                                        "right": 0.0,
+                                        "left": 0.0
+                                    }
+                                ],
+                                "required": [
+                                    "left",
+                                    "right",
+                                    "top",
+                                    "bottom"
+                                ],
+                                "additionalProperties": true,
+                                "properties": {
+                                    "left": {
+                                        "$id": "#/properties/containers/items/anyOf/0/properties/margins/properties/left",
+                                        "type": "number",
+                                        "title": "The left schema",
+                                        "description": "An explanation about the purpose of this instance.",
+                                        "default": 0.0,
+                                        "examples": [
+                                            0.0
+                                        ]
+                                    },
+                                    "right": {
+                                        "$id": "#/properties/containers/items/anyOf/0/properties/margins/properties/right",
+                                        "type": "number",
+                                        "title": "The right schema",
+                                        "description": "An explanation about the purpose of this instance.",
+                                        "default": 0.0,
+                                        "examples": [
+                                            0.0
+                                        ]
+                                    },
+                                    "top": {
+                                        "$id": "#/properties/containers/items/anyOf/0/properties/margins/properties/top",
+                                        "type": "number",
+                                        "title": "The top schema",
+                                        "description": "An explanation about the purpose of this instance.",
+                                        "default": 0.0,
+                                        "examples": [
+                                            0.0
+                                        ]
+                                    },
+                                    "bottom": {
+                                        "$id": "#/properties/containers/items/anyOf/0/properties/margins/properties/bottom",
+                                        "type": "number",
+                                        "title": "The bottom schema",
+                                        "description": "An explanation about the purpose of this instance.",
+                                        "default": 0.0,
+                                        "examples": [
+                                            0.0
+                                        ]
+                                    }
+                                }
+                            },
+                            "cover": {
+                                "$id": "#/properties/containers/items/anyOf/0/properties/cover",
+                                "type": "integer",
+                                "title": "The cover schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": 0.0,
+                                "examples": [
+                                    0.0
+                                ]
+                            },
+                            "items": {
+                                "$id": "#/properties/containers/items/anyOf/0/properties/items",
+                                "type": "array",
+                                "title": "The items schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": [],
+                                "examples": [
+                                    [
+                                        {
+                                            "text_meta": {
+                                                "text": "My fashion style",
+                                                "font": "Arial",
+                                                "font_size": 18.0,
+                                                "font_color": "#FFFFFF"
+                                            },
+                                            "width": 380.0,
+                                            "height": 400.0,
+                                            "border": {
+                                                "size": {
+                                                    "top": 2.0,
+                                                    "bottom": 2.0,
+                                                    "right": 2.0,
+                                                    "left": 2.0
+                                                },
+                                                "color": "#FFF",
+                                                "radius": ""
+                                            },
+                                            "rotation": 0.0,
+                                            "x": 120.0,
+                                            "image_meta": {
+                                                "source": "https://images.unsplash.com/photo-1568251723346-462c2abfd420?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=932&q=80",
+                                                "transformation_data": {
+                                                    "rotation": 0.0,
+                                                    "filters": "",
+                                                    "crop_x": 0.0,
+                                                    "crop_y": 0.0
+                                                }
+                                            },
+                                            "y": 4.5,
+                                            "type": "image"
+                                        }
+                                    ]
+                                ],
+                                "additionalItems": true,
+                                "items": {
+                                    "anyOf": [
+                                        {
+                                            "$id": "#/properties/containers/items/anyOf/0/properties/items/items/anyOf/0",
+                                            "type": "object",
+                                            "title": "The first anyOf schema",
+                                            "description": "An explanation about the purpose of this instance.",
+                                            "default": {},
+                                            "examples": [
+                                                {
+                                                    "x": 120.0,
+                                                    "image_meta": {
+                                                        "source": "https://images.unsplash.com/photo-1568251723346-462c2abfd420?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=932&q=80",
+                                                        "transformation_data": {
+                                                            "crop_y": 0.0,
+                                                            "rotation": 0.0,
+                                                            "filters": "",
+                                                            "crop_x": 0.0
+                                                        }
+                                                    },
+                                                    "y": 4.5,
+                                                    "type": "image",
+                                                    "text_meta": {
+                                                        "text": "My fashion style",
+                                                        "font": "Arial",
+                                                        "font_size": 18.0,
+                                                        "font_color": "#FFFFFF"
+                                                    },
+                                                    "width": 380.0,
+                                                    "height": 400.0,
+                                                    "border": {
+                                                        "radius": "",
+                                                        "size": {
+                                                            "top": 2.0,
+                                                            "bottom": 2.0,
+                                                            "right": 2.0,
+                                                            "left": 2.0
+                                                        },
+                                                        "color": "#FFF"
+                                                    },
+                                                    "rotation": 0.0
+                                                }
+                                            ],
+                                            "required": [
+                                                "width",
+                                                "height",
+                                                "x",
+                                                "y",
+                                                "rotation",
+                                                "type",                                                
+                                                "border"
+                                            ],
+                                            "additionalProperties": true,
+                                            "properties": {
+                                                "width": {
+                                                    "$id": "#/properties/containers/items/anyOf/0/properties/items/items/anyOf/0/properties/width",
+                                                    "type": "number",
+                                                    "title": "The width schema",
+                                                    "description": "An explanation about the purpose of this instance.",
+                                                    "default": 0.0,
+                                                    "examples": [
+                                                        380.0
+                                                    ]
+                                                },
+                                                "height": {
+                                                    "$id": "#/properties/containers/items/anyOf/0/properties/items/items/anyOf/0/properties/height",
+                                                    "type": "number",
+                                                    "title": "The height schema",
+                                                    "description": "An explanation about the purpose of this instance.",
+                                                    "default": 0.0,
+                                                    "examples": [
+                                                        400.0
+                                                    ]
+                                                },
+                                                "x": {
+                                                    "$id": "#/properties/containers/items/anyOf/0/properties/items/items/anyOf/0/properties/x",
+                                                    "type": "number",
+                                                    "title": "The x schema",
+                                                    "description": "An explanation about the purpose of this instance.",
+                                                    "default": 0.0,
+                                                    "examples": [
+                                                        120.0
+                                                    ]
+                                                },
+                                                "y": {
+                                                    "$id": "#/properties/containers/items/anyOf/0/properties/items/items/anyOf/0/properties/y",
+                                                    "type": "number",
+                                                    "title": "The y schema",
+                                                    "description": "An explanation about the purpose of this instance.",
+                                                    "default": 0.0,
+                                                    "examples": [
+                                                        4.5
+                                                    ]
+                                                },
+                                                "rotation": {
+                                                    "$id": "#/properties/containers/items/anyOf/0/properties/items/items/anyOf/0/properties/rotation",
+                                                    "type": "number",
+                                                    "title": "The rotation schema",
+                                                    "description": "An explanation about the purpose of this instance.",
+                                                    "default": 0.0,
+                                                    "examples": [
+                                                        0.0
+                                                    ]
+                                                },
+                                                "type": {
+                                                    "$id": "#/properties/containers/items/anyOf/0/properties/items/items/anyOf/0/properties/type",
+                                                    "type": "string",
+                                                    "title": "The type schema",
+                                                    "description": "An explanation about the purpose of this instance.",
+                                                    "default": "",
+                                                    "examples": [
+                                                        "image"
+                                                    ]
+                                                },
+                                                "image_meta": {
+                                                    "$id": "#/properties/containers/items/anyOf/0/properties/items/items/anyOf/0/properties/image_meta",
+                                                    "type": "object",
+                                                    "title": "The image_meta schema",
+                                                    "description": "An explanation about the purpose of this instance.",
+                                                    "default": {},
+                                                    "examples": [
+                                                        {
+                                                            "source": "https://images.unsplash.com/photo-1568251723346-462c2abfd420?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=932&q=80",
+                                                            "transformation_data": {
+                                                                "rotation": 0.0,
+                                                                "filters": "",
+                                                                "crop_x": 0.0,
+                                                                "crop_y": 0.0
+                                                            }
+                                                        }
+                                                    ],
+                                                    "required": [
+                                                        "source",
+                                                        "transformation_data"
+                                                    ],
+                                                    "additionalProperties": true,
+                                                    "properties": {
+                                                        "source": {
+                                                            "$id": "#/properties/containers/items/anyOf/0/properties/items/items/anyOf/0/properties/image_meta/properties/source",
+                                                            "type": "string",
+                                                            "title": "The source schema",
+                                                            "description": "An explanation about the purpose of this instance.",
+                                                            "default": "",
+                                                            "examples": [
+                                                                "https://images.unsplash.com/photo-1568251723346-462c2abfd420?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=932&q=80"
+                                                            ]
+                                                        },
+                                                        "transformation_data": {
+                                                            "$id": "#/properties/containers/items/anyOf/0/properties/items/items/anyOf/0/properties/image_meta/properties/transformation_data",
+                                                            "type": "object",
+                                                            "title": "The transformation_data schema",
+                                                            "description": "An explanation about the purpose of this instance.",
+                                                            "default": {},
+                                                            "examples": [
+                                                                {
+                                                                    "rotation": 0.0,
+                                                                    "filters": "",
+                                                                    "crop_x": 0.0,
+                                                                    "crop_y": 0.0
+                                                                }
+                                                            ],
+                                                            "required": [
+                                                                "crop_x",
+                                                                "crop_y",
+                                                                "rotation",
+                                                                "filters"
+                                                            ],
+                                                            "additionalProperties": true,
+                                                            "properties": {
+                                                                "crop_x": {
+                                                                    "$id": "#/properties/containers/items/anyOf/0/properties/items/items/anyOf/0/properties/image_meta/properties/transformation_data/properties/crop_x",
+                                                                    "type": "number",
+                                                                    "title": "The crop_x schema",
+                                                                    "description": "An explanation about the purpose of this instance.",
+                                                                    "default": 0.0,
+                                                                    "examples": [
+                                                                        0.0
+                                                                    ]
+                                                                },
+                                                                "crop_y": {
+                                                                    "$id": "#/properties/containers/items/anyOf/0/properties/items/items/anyOf/0/properties/image_meta/properties/transformation_data/properties/crop_y",
+                                                                    "type": "number",
+                                                                    "title": "The crop_y schema",
+                                                                    "description": "An explanation about the purpose of this instance.",
+                                                                    "default": 0.0,
+                                                                    "examples": [
+                                                                        0.0
+                                                                    ]
+                                                                },
+                                                                "rotation": {
+                                                                    "$id": "#/properties/containers/items/anyOf/0/properties/items/items/anyOf/0/properties/image_meta/properties/transformation_data/properties/rotation",
+                                                                    "type": "number",
+                                                                    "title": "The rotation schema",
+                                                                    "description": "An explanation about the purpose of this instance.",
+                                                                    "default": 0.0,
+                                                                    "examples": [
+                                                                        0.0
+                                                                    ]
+                                                                },
+                                                                "filters": {
+                                                                    "$id": "#/properties/containers/items/anyOf/0/properties/items/items/anyOf/0/properties/image_meta/properties/transformation_data/properties/filters",
+                                                                    "type": "string",
+                                                                    "title": "The filters schema",
+                                                                    "description": "An explanation about the purpose of this instance.",
+                                                                    "default": "",
+                                                                    "examples": [
+                                                                        ""
+                                                                    ]
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                },
+                                                "text_meta": {
+                                                    "$id": "#/properties/containers/items/anyOf/0/properties/items/items/anyOf/0/properties/text_meta",
+                                                    "type": "object",
+                                                    "title": "The text_meta schema",
+                                                    "description": "An explanation about the purpose of this instance.",
+                                                    "default": {},
+                                                    "examples": [
+                                                        {
+                                                            "text": "My fashion style",
+                                                            "font": "Arial",
+                                                            "font_size": 18.0,
+                                                            "font_color": "#FFFFFF"
+                                                        }
+                                                    ],
+                                                    "required": [
+                                                        "font",
+                                                        "font_size",
+                                                        "font_color",
+                                                        "text"
+                                                    ],
+                                                    "additionalProperties": true,
+                                                    "properties": {
+                                                        "font": {
+                                                            "$id": "#/properties/containers/items/anyOf/0/properties/items/items/anyOf/0/properties/text_meta/properties/font",
+                                                            "type": "string",
+                                                            "title": "The font schema",
+                                                            "description": "An explanation about the purpose of this instance.",
+                                                            "default": "",
+                                                            "examples": [
+                                                                "Arial"
+                                                            ]
+                                                        },
+                                                        "font_size": {
+                                                            "$id": "#/properties/containers/items/anyOf/0/properties/items/items/anyOf/0/properties/text_meta/properties/font_size",
+                                                            "type": "number",
+                                                            "title": "The font_size schema",
+                                                            "description": "An explanation about the purpose of this instance.",
+                                                            "default": 0.0,
+                                                            "examples": [
+                                                                18.0
+                                                            ]
+                                                        },
+                                                        "font_color": {
+                                                            "$id": "#/properties/containers/items/anyOf/0/properties/items/items/anyOf/0/properties/text_meta/properties/font_color",
+                                                            "type": "string",
+                                                            "title": "The font_color schema",
+                                                            "description": "An explanation about the purpose of this instance.",
+                                                            "default": "",
+                                                            "examples": [
+                                                                "#FFFFFF"
+                                                            ]
+                                                        },
+                                                        "text": {
+                                                            "$id": "#/properties/containers/items/anyOf/0/properties/items/items/anyOf/0/properties/text_meta/properties/text",
+                                                            "type": "string",
+                                                            "title": "The text schema",
+                                                            "description": "An explanation about the purpose of this instance.",
+                                                            "default": "",
+                                                            "examples": [
+                                                                "My fashion style"
+                                                            ]
+                                                        }
+                                                    }
+                                                },
+                                                "border": {
+                                                    "$id": "#/properties/containers/items/anyOf/0/properties/items/items/anyOf/0/properties/border",
+                                                    "type": "object",
+                                                    "title": "The border schema",
+                                                    "description": "An explanation about the purpose of this instance.",
+                                                    "default": {},
+                                                    "examples": [
+                                                        {
+                                                            "radius": "",
+                                                            "size": {
+                                                                "left": 2.0,
+                                                                "top": 2.0,
+                                                                "bottom": 2.0,
+                                                                "right": 2.0
+                                                            },
+                                                            "color": "#FFF"
+                                                        }
+                                                    ],
+                                                    "required": [
+                                                        "size",
+                                                        "color",
+                                                        "radius"
+                                                    ],
+                                                    "additionalProperties": true,
+                                                    "properties": {
+                                                        "size": {
+                                                            "$id": "#/properties/containers/items/anyOf/0/properties/items/items/anyOf/0/properties/border/properties/size",
+                                                            "type": "object",
+                                                            "title": "The size schema",
+                                                            "description": "An explanation about the purpose of this instance.",
+                                                            "default": {},
+                                                            "examples": [
+                                                                {
+                                                                    "bottom": 2.0,
+                                                                    "right": 2.0,
+                                                                    "left": 2.0,
+                                                                    "top": 2.0
+                                                                }
+                                                            ],
+                                                            "required": [
+                                                                "left",
+                                                                "right",
+                                                                "top",
+                                                                "bottom"
+                                                            ],
+                                                            "additionalProperties": true,
+                                                            "properties": {
+                                                                "left": {
+                                                                    "$id": "#/properties/containers/items/anyOf/0/properties/items/items/anyOf/0/properties/border/properties/size/properties/left",
+                                                                    "type": "number",
+                                                                    "title": "The left schema",
+                                                                    "description": "An explanation about the purpose of this instance.",
+                                                                    "default": 0.0,
+                                                                    "examples": [
+                                                                        2.0
+                                                                    ]
+                                                                },
+                                                                "right": {
+                                                                    "$id": "#/properties/containers/items/anyOf/0/properties/items/items/anyOf/0/properties/border/properties/size/properties/right",
+                                                                    "type": "number",
+                                                                    "title": "The right schema",
+                                                                    "description": "An explanation about the purpose of this instance.",
+                                                                    "default": 0.0,
+                                                                    "examples": [
+                                                                        2.0
+                                                                    ]
+                                                                },
+                                                                "top": {
+                                                                    "$id": "#/properties/containers/items/anyOf/0/properties/items/items/anyOf/0/properties/border/properties/size/properties/top",
+                                                                    "type": "number",
+                                                                    "title": "The top schema",
+                                                                    "description": "An explanation about the purpose of this instance.",
+                                                                    "default": 0.0,
+                                                                    "examples": [
+                                                                        2.0
+                                                                    ]
+                                                                },
+                                                                "bottom": {
+                                                                    "$id": "#/properties/containers/items/anyOf/0/properties/items/items/anyOf/0/properties/border/properties/size/properties/bottom",
+                                                                    "type": "number",
+                                                                    "title": "The bottom schema",
+                                                                    "description": "An explanation about the purpose of this instance.",
+                                                                    "default": 0.0,
+                                                                    "examples": [
+                                                                        2.0
+                                                                    ]
+                                                                }
+                                                            }
+                                                        },
+                                                        "color": {
+                                                            "$id": "#/properties/containers/items/anyOf/0/properties/items/items/anyOf/0/properties/border/properties/color",
+                                                            "type": "string",
+                                                            "title": "The color schema",
+                                                            "description": "An explanation about the purpose of this instance.",
+                                                            "default": "",
+                                                            "examples": [
+                                                                "#FFF"
+                                                            ]
+                                                        },
+                                                        "radius": {
+                                                            "$id": "#/properties/containers/items/anyOf/0/properties/items/items/anyOf/0/properties/border/properties/radius",
+                                                            "type": "string",
+                                                            "title": "The radius schema",
+                                                            "description": "An explanation about the purpose of this instance.",
+                                                            "default": "",
+                                                            "examples": [
+                                                                ""
+                                                            ]
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    ],
+                                    "$id": "#/properties/containers/items/anyOf/0/properties/items/items"
+                                }
+                            }
+                        }
+                    }
+                ],
+                "$id": "#/properties/containers/items"
+            }
+        }
+    }
+}

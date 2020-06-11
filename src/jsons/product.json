@@ -1,0 +1,93 @@
+{
+  "project": {
+    "title": "string",
+    "description": "text",
+    "width": 400,
+    "height": 500,
+    "margin": 0,
+    "print_area": {
+      "width": 600,
+      "height": 600
+    },
+    "background": {
+      "type": "color",
+      "color": "#FFFFFF",
+      "url": null
+    },
+    "spine": "Fashion book design",
+    "container": [
+      {
+        "background": {
+          "type": "color",
+          "color": "#000000",
+          "url": null
+        },
+        "width": 15,
+        "height": 19,
+        "radius": 0,
+        "margins": {
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "bottom": 0
+        },
+        "cover": 0,
+        "items": [
+          {
+            "width": 380,
+            "height": 400,
+            "x": 120,
+            "y": 4.5,
+            "rotation": 0,
+            "type": "image",
+            "image_meta": {
+              "source": "https://images.unsplash.com/photo-1568251723346-462c2abfd420?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=932&q=80",
+              "transformation_data": {
+                "crop_x": 0,
+                "crop_y": 0,
+                "rotation": 0,
+                "filters": null
+              }
+            },
+            "text_meta": null,
+            "border": {
+              "size": {
+                "left": 2,
+                "right": 2,
+                "top": 2,
+                "bottom": 2
+              },
+              "color": "#FFF",
+              "radius": ""
+            }
+          },
+          {
+            "width": 14,
+            "height": 5,
+            "x": 0.5,
+            "y": 12,
+            "rotation": 0,
+            "type": "text",
+            "image_meta": null,
+            "text_meta": {
+              "font": "Arial",
+              "font_size": 18,
+              "font_color": "#FFFFFF",
+              "text": "My fashion style"
+            },
+            "border": {
+              "size": {
+                "left": 0,
+                "right": 0,
+                "top": 0,
+                "bottom": 0
+              },
+              "color": "#FFF",
+              "radius": ""
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

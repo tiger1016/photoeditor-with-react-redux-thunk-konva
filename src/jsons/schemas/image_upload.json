@@ -1,0 +1,62 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "title": "The root schema",
+    "description": "The root schema comprises the entire JSON document.",
+    "default": {},
+    "examples": [
+        {
+            "uuid": "9b1deb4d-3b7d-4bad-9bdd-2b0d7b3dcb6d",
+            "project_uuid": 1.0,            
+            "uploaded": false
+        }
+    ],
+    "required": [
+        "uuid",        
+        "uploaded"
+    ],
+    "additionalProperties": true,
+    "properties": {
+        "uuid": {
+            "$id": "#/properties/uuid",
+            "type": "string",
+            "title": "The uuid schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "9b1deb4d-3b7d-4bad-9bdd-2b0d7b3dcb6d"
+            ]
+        },
+        "project_id": {
+            "$id": "#/properties/project_id",
+            "type": "integer",
+            "title": "The project_id schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": 0.0,
+            "examples": [
+                1.0
+            ]
+        },
+        "base64": {
+            "$id": "#/properties/base64",
+            "type": "string",
+            "title": "The base64 schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "iVBORw0KGgoAAAANSUhEUgAAASwAAADIBAMAAACg8cFmAAAAG1BMVEXMzMyWlpaqqqqcnJyxsbG+vr7FxcWjo6O3t7eLfgyYAAAACXBIWXMAAA7EAAAOxAGVKw4bAAACl0lEQVR4nO3Wy2/aQBAG8OFhmyPjtYEjVqWcWRG1PYKiJD1iqVV7NI0UrnHVRj1Cmz7+7M6ssUMlkELVLT18PwmQrZX2Yx+zSwQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB/T8inTrDX/xpreuoE8DTZhKhriH7wZ6Jl332W/dWA3NoKuWfP6a05k8dr+1FfPhsuuNi29yeXAFFMETOPm1gD28TaMD8wS+6OtHhOdMOcSqy2a+9PayRJUsqGD2XSxIr5vo4VFyXfB3ZGWfJmHhOV8RcjsebDV2XqMVZbutr0A57JABR1LHmqY00ol6Ga35Fd62SHvKCci5DlaegxVk+KUzZuaxd21owWNbHW1EpkqvuhDFHApA0lv4tkC3+x9O/bdUemUoakjpU+xiqolbqXt+4vRCP9KdoSlcqFv1hUzqTvli7xzaRZ8r/FGlRbNHyXMXVSfV9EZjqdykj6M7+TGdFuZaaaAvEYi+pY72XvsRs6iaXbkqsV6MlyECVPiBVa/vCtGi2S0XWxxh5jdUbS784k5vtjRWahT7q2dLRGHhM53Tif0M6S3+yPpd+6ExP9KSJd8rc+YwUmm1FdIKTvbH8sfddl6hlXIKr2a5+5rJSIbTmVBR3ygdGS8cyrQiblNNBy6vc6lhn9codPZIqbA7Eivnxt+DtlsRyRhZxBP8vEa6xca3p1VAds+MDaCvWktok2TCTWyvNGrA7r+qKysp8O1i17Xnx9SXRhrvRic2G8XmxcRTjOv7njZ+MjGgeX5Hajd+FRR1tPKkPk80az1bZH/feQz4LSe4nX2nhcJ6VswYmnLDu6ZnZUe7nLG5/3rD8UXr+4OnUGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPDrFzA9aE+E7NnSAAAAAElFTkSuQmCC"
+            ]
+        },
+        "uploaded": {
+            "$id": "#/properties/uploaded",
+            "type": "boolean",
+            "title": "The uploaded schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": false,
+            "examples": [
+                false
+            ]
+        }
+    }
+}
